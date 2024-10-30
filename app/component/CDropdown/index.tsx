@@ -3,11 +3,11 @@ import React, { FC } from "react";
 import { CDropdownProptype } from "./propTypes";
 
 const CDropdown: FC<CDropdownProptype> = (props: CDropdownProptype) => {
-  const { items, key = "dropdown-element", children, className } = props;
+  const { items, id = "dropdown-element", children, className } = props;
   return (
     <Dropdown
       menu={{ items }}
-      key={key ?? "dropdown-element"}
+      key={id ?? "dropdown-element"}
       className={className}
       placement="bottom"
     >
