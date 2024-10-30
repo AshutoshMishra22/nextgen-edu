@@ -1,7 +1,7 @@
 import { DropDownProps, MenuProps } from "antd";
 
 interface CDropdownProptype extends Omit<DropDownProps, "children"> {
-  key?: string;
+  id?: string;
   children: React.ReactNode | string;
   items: MenuProps["items"];
 }
