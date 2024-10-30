@@ -43,4 +43,20 @@ const Admission_list = [
     label: "a danger item",
   },
 ];
-export { Admission_list };
+const navigationControlList = [
+  {
+    label: "Home",
+  },
+  {
+    label: "Admission",
+    menuItem: Admission_list,
+  },
+  {
+    label: "About us",
+  },
+  {
+    label: "Contact us",
+  },
+];
+
+export { navigationControlList };
