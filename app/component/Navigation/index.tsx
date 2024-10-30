@@ -1,9 +1,9 @@
 import React, { FC } from "react";
 import { PropTypes } from "./propTypes";
-import { Dropdown, Flex, Space } from "antd";
+import { Flex, Space } from "antd";
 import styles from "./index.module.scss";
 import CDropdown from "../CDropdown";
-import { Admission_list } from "./helper";
+import { navigationControlList } from "./helper";
 
 const NavigationHeader: FC = ({}: PropTypes) => {
   return (
@@ -13,8 +13,17 @@ const NavigationHeader: FC = ({}: PropTypes) => {
       className={styles.navigation_container}
     >
       <span> ICON </span>
-      <Flex>
-        <CDropdown items={Admission_list}>Admission</CDropdown>
+      <Flex gap={16} className={styles.navigation_control}>
+        {navigationControlList.map((obj) => {
+          if (obj.menuItem) {
+            return (
+              <CDropdown items={obj.menuItem} key={obj.label}>
+                {obj.label}
+              </CDropdown>
+            );
+          }
+          return <Space key={obj.label}>{obj.label}</Space>;
+        })}
       </Flex>
     </Flex>
   );

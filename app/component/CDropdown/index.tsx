@@ -1,6 +1,5 @@
 import { Dropdown, Space } from "antd";
 import React, { FC } from "react";
-import styles from "./index.module.scss";
 import { CDropdownProptype } from "./propTypes";
 
 const CDropdown: FC<CDropdownProptype> = (props: CDropdownProptype) => {
@@ -10,8 +9,9 @@ const CDropdown: FC<CDropdownProptype> = (props: CDropdownProptype) => {
       menu={{ items }}
       key={key ?? "dropdown-element"}
       className={className}
+      placement="bottom"
     >
-      <Space className={styles.dropdown_item}>{children}</Space>
+      <Space>{children}</Space>
     </Dropdown>
   );
 };
