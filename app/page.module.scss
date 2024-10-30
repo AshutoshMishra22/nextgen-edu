@@ -1,0 +1,11 @@
+@import "./base.module.scss";
+
+.page_children_container {
+  padding: 1rem;
+}
+.carousel_image {
+  height: 400px;
+  @include xs-mobile {
+    height: 100px;
+  }
+}
