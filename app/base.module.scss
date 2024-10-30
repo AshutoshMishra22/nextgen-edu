@@ -1,3 +1,21 @@
 // COLOR
 $base-white: #eeeeee;
 $header-box-shadow: rgba(0, 0, 0, 0.1);
+$dark-blue: #364d79;
+
+//RESPONSIVE
+@mixin xs-mobile {
+  @media only screen and (max-width: 376px) {
+    @content;
+  }
+}
+@mixin sm-mobile {
+  @media only screen and (max-width: 426px) {
+    @content;
+  }
+}
+@mixin md-tablet {
+  @media only screen and (max-width: 769px) {
+    @content;
+  }
+}
