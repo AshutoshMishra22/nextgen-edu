@@ -1,6 +1,12 @@
+@import "../../base.module.scss";
+
 .navigation_container {
   height: 56px;
   padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  background-color: $base-white;
+  box-shadow: 0px 2px 4px $header-box-shadow;
   .navigation_control {
     & > * {
       cursor: pointer;
