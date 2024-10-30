@@ -1,3 +1,5 @@
+import { MenuProps } from "antd";
+
 const Admission_list = [
   {
     key: "1",
@@ -43,19 +45,31 @@ const Admission_list = [
     label: "a danger item",
   },
 ];
-const navigationControlList = [
+const navigationControlList: Required<MenuProps>["items"][number][] = [
   {
     label: "Home",
-  },
-  {
-    label: "Admission",
-    menuItem: Admission_list,
+    key: "homepage",
+    disabled: false,
   },
   {
     label: "About us",
+    key: "about-us",
   },
   {
+    label: "Admission",
+    key: "admission",
+    disabled: false,
+    children: [
+      { key: "11", label: "Option 1" },
+      { key: "12", label: "Option 2" },
+      { key: "13", label: "Option 3" },
+      { key: "14", label: "Option 4" },
+    ],
+  },
+
+  {
     label: "Contact us",
+    key: "contact-us",
   },
 ];
 
