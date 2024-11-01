@@ -12,6 +12,8 @@
       font-size: 14px;
       line-height: 21px;
     }
+    .panel_card {
+    }
   }
   .right_container {
     flex: 1;
@@ -30,7 +32,8 @@
       margin: 0;
       padding: 1rem;
       border-bottom: 1px solid $base-gray;
-      border-top-left-radius: 12px;
+      border-top-left-radius: inherit;
+      border-top-right-radius: inherit;
       color: $base-white;
     }
     .list_wrapper {
@@ -38,6 +41,7 @@
       padding-bottom: 1rem;
       overflow: auto;
       height: -webkit-fill-available;
+      width: 100%;
       .notification_list_container {
         padding: 0;
         li {
@@ -77,11 +81,12 @@
   .panel_container {
     align-items: center !important;
     .left_container {
-      max-width: 50%;
+      flex: unset;
     }
     .right_container {
       margin: 0;
-      max-width: 42%;
+      flex: unset;
+      border-radius: 12px;
     }
   }
 }
