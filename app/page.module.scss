@@ -1,11 +1,46 @@
 @import "./base.module.scss";
 
-.page_children_container {
-  padding: 1rem;
-}
-.carousel_image {
-  height: 400px;
-  @include xs-mobile {
-    height: 100px;
+.container {
+  color: $base-black;
+
+  .carousel_image_container {
+    background: linear-gradient(
+      90deg,
+      rgba(255, 115, 17, 0.25) 0%,
+      rgba(238, 130, 130, 1) 100%
+    );
+  }
+  .carousel_image {
+    height: 400px;
+    @include xs-mobile {
+      height: 100px;
+    }
+  }
+  .page_children_container {
+    padding: 0;
+    height: 1000px;
+    & > section,
+    & > div {
+      padding: 0 2rem;
+    }
+    .announcement_bar {
+      height: 44px;
+      white-space: nowrap;
+      box-sizing: border-box;
+      .message {
+        overflow: hidden;
+        width: 100%;
+        padding: 0;
+        p {
+          display: inline-block;
+          width: 100%;
+          padding-left: 100%;
+          animation: marquee 30s linear infinite;
+          margin: 0;
+          padding: 0;
+          padding-left: 100%;
+        }
+      }
+    }
   }
 }
