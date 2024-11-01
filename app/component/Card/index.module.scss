@@ -1,0 +1,28 @@
+@import "../../base.module.scss";
+
+.card_group {
+  gap: 20px;
+  width: 100%;
+  padding: 1rem 0;
+  & > div {
+    flex: 1;
+    &:hover {
+      @include gradient-bg;
+    }
+    & > div {
+      display: flex;
+      padding: 0.5rem 24px !important;
+      flex-direction: column;
+      gap: 8px;
+    }
+  }
+  .card_icon {
+    font-size: 2rem;
+    line-height: 21px;
+  }
+  .card_title {
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+  }
+}

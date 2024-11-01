@@ -25,17 +25,13 @@
     border-bottom-right-radius: 0;
 
     .notification_heading {
+      @include gradient-bg;
       position: sticky;
       margin: 0;
       padding: 1rem;
       border-bottom: 1px solid $base-gray;
       border-top-left-radius: 12px;
       color: $base-white;
-      background: linear-gradient(
-        90deg,
-        $gardient-primary-color 0%,
-        $gardient-secondary-color 100%
-      );
     }
     .list_wrapper {
       position: absolute;

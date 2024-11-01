@@ -9,15 +9,12 @@
   }
 }
 .announcement_bar {
+  @include gradient-bg;
   height: 44px;
   padding: 0 5rem;
   white-space: nowrap;
   box-sizing: border-box;
-  background: linear-gradient(
-    90deg,
-    $gardient-primary-color 0%,
-    $gardient-secondary-color 100%
-  );
+
   .message {
     overflow: hidden;
     width: 100%;

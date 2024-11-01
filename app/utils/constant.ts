@@ -84,5 +84,11 @@ const mockNotification = [
     dateTime: "29 Oct, 2024",
   },
 ];
-
-export { hero_banner_list, schoolMessage, mockNotification };
+const actionHighlight = [
+  { id: "mission", icon: "", title: "Mission", link: "/mission" },
+  { id: "syllabus", icon: "", title: "Syllabus", link: "/test" },
+  { id: "fee", icon: "", title: "Fee Structure", link: "/test" },
+  { id: "booklist", icon: "", title: "Book List", link: "/test" },
+  { id: "form", icon: "", title: "Form", link: "/test" },
+];
+export { hero_banner_list, schoolMessage, mockNotification, actionHighlight };
