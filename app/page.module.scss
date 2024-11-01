@@ -8,31 +8,15 @@
   }
   .carousel_image {
     height: 400px;
-    @include xs-mobile {
-      height: 100px;
-    }
   }
   .page_children_container {
     padding: 0 5rem;
-    height: 1000px;
   }
-  .announcement_bar {
-    height: 44px;
-    white-space: nowrap;
-    box-sizing: border-box;
-    .message {
-      overflow: hidden;
-      width: 100%;
-      padding: 0;
-      p {
-        display: inline-block;
-        width: 100%;
-        padding-left: 100%;
-        animation: marquee 30s linear infinite;
-        margin: 0;
-        padding: 0;
-        padding-left: 100%;
-      }
+}
+@include sm-mobile {
+  .container {
+    .page_children_container {
+      padding: 0 1rem;
     }
   }
 }
