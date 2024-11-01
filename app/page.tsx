@@ -1,7 +1,7 @@
 import { Card, Carousel, Flex } from "antd";
 import { Announcment, CCard, HomePanel, NavigationHeader } from "./component";
 import styles from "./page.module.scss";
-import { hero_banner_list } from "./utils/constant";
+import { hero_banner_list, mockNotification } from "./utils/constant";
 import Image from "next/image";
 
 const gridStyle: React.CSSProperties = {
@@ -25,7 +25,7 @@ export default function Home() {
       </Carousel>
       <Announcment />
       <section className={styles.page_children_container}>
-        <HomePanel />
+        <HomePanel notificationList={mockNotification} />
         <CCard />
       </section>
     </main>
