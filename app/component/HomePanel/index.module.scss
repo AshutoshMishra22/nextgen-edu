@@ -19,21 +19,18 @@
     flex: 1;
     position: relative;
     margin-top: 1.5rem;
-    border: 2px solid $base-gray;
     height: 580px;
     width: 100%;
-    border-radius: 12px;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
 
     .notification_heading {
       @include gradient-bg;
       position: sticky;
       margin: 0;
       padding: 1rem;
+      border: 2px solid $gardient-secondary-color;
       border-bottom: 1px solid $base-gray;
-      border-top-left-radius: inherit;
-      border-top-right-radius: inherit;
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
       color: $base-white;
     }
     .list_wrapper {
@@ -41,7 +38,10 @@
       padding-bottom: 1rem;
       overflow: auto;
       height: -webkit-fill-available;
+      border: 2px solid $base-gray;
       width: 100%;
+      border-top-width: 0;
+      box-sizing: border-box;
       .notification_list_container {
         padding: 0;
         li {
