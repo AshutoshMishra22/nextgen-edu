@@ -4,11 +4,7 @@
   color: $base-black;
 
   .carousel_image_container {
-    background: linear-gradient(
-      90deg,
-      $gardient-primary-color 0%,
-      $gardient-secondary-color 100%
-    );
+    @include gradient-bg;
   }
   .carousel_image {
     height: 400px;

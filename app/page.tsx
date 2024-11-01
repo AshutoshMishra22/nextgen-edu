@@ -25,8 +25,8 @@ export default function Home() {
       </Carousel>
       <Announcment />
       <section className={styles.page_children_container}>
-        <HomePanel notificationList={mockNotification} />
         <CCard />
+        <HomePanel notificationList={mockNotification} />
       </section>
     </main>
   );
