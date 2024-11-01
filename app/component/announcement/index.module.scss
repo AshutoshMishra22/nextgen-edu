@@ -30,3 +30,8 @@
     }
   }
 }
+@include sm-mobile {
+  .announcement_bar {
+    padding: 0 1rem;
+  }
+}
