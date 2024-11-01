@@ -1,3 +1,10 @@
+import {
+  faBookOpen,
+  faBullseye,
+  faFileSignature,
+  faReceipt,
+  faSwatchbook,
+} from "@fortawesome/free-solid-svg-icons";
 import school1 from "../assest/school_1.svg";
 const hero_banner_list = [school1, school1];
 const schoolMessage =
@@ -85,10 +92,10 @@ const mockNotification = [
   },
 ];
 const actionHighlight = [
-  { id: "mission", icon: "", title: "Mission", link: "/mission" },
-  { id: "syllabus", icon: "", title: "Syllabus", link: "/test" },
-  { id: "fee", icon: "", title: "Fee Structure", link: "/test" },
-  { id: "booklist", icon: "", title: "Book List", link: "/test" },
-  { id: "form", icon: "", title: "Form", link: "/test" },
+  { id: "mission", icon: faBullseye, title: "Mission", link: "/mission" },
+  { id: "syllabus", icon: faSwatchbook, title: "Syllabus", link: "/test" },
+  { id: "fee", icon: faReceipt, title: "Fee Structure", link: "/test" },
+  { id: "booklist", icon: faBookOpen, title: "Book List", link: "/test" },
+  { id: "form", icon: faFileSignature, title: "Form", link: "/test" },
 ];
 export { hero_banner_list, schoolMessage, mockNotification, actionHighlight };
