@@ -23,8 +23,8 @@ export default function Home() {
           />
         ))}
       </Carousel>
+      <Announcment />
       <section className={styles.page_children_container}>
-        <Announcment />
         <HomePanel />
         <CCard />
       </section>

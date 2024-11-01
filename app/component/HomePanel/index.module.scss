@@ -1,18 +1,39 @@
 @import "../../base.module.scss";
 
-.left_container {
-  color: $base-black;
-  max-width: 60%;
-  .greet_school {
-    margin-left: 0.5rem;
+.panel_container {
+  .left_container {
+    color: $base-black;
+    max-width: 55%;
+    .greet_school {
+      margin-left: 0.5rem;
+    }
+    .school_message {
+      margin: 0;
+      font-size: 14px;
+      line-height: 21px;
+    }
   }
-  .school_message {
-    margin: 0;
-    font-size: 14px;
-    line-height: 21px;
+  .right_container {
+    max-width: 35%;
+    position: relative;
+    margin-top: 2rem;
+    border: 2px solid $base-gray;
+    height: 400px;
+    width: 100%;
+    border-radius: 12px;
+    border-top-right-radius: 0;
   }
 }
-.right_container {
-  max-width: 40%;
-  margin: 1rem 2rem;
+
+@include md-tablet {
+  .panel_container {
+    align-items: center !important;
+    .left_container {
+      max-width: 50%;
+    }
+    .right_container {
+      margin: 0;
+      max-width: 42%;
+    }
+  }
 }

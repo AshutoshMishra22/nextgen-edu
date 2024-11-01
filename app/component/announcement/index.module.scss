@@ -1,3 +1,5 @@
+@import "../../base.module.scss";
+
 @keyframes marquee {
   0% {
     transform: translate(0, 0);
@@ -8,12 +10,13 @@
 }
 .announcement_bar {
   height: 44px;
+  padding: 0 5rem;
   white-space: nowrap;
   box-sizing: border-box;
   background: linear-gradient(
     90deg,
-    rgba(255, 115, 17, 0.25) 0%,
-    rgba(238, 130, 130, 1) 100%
+    $gardient-primary-color 0%,
+    $gardient-secondary-color 100%
   );
   .message {
     overflow: hidden;
