@@ -3,7 +3,7 @@
 .panel_container {
   .left_container {
     color: $base-black;
-    max-width: 55%;
+    flex: 1.5;
     .greet_school {
       margin-left: 0.5rem;
     }
@@ -14,14 +14,66 @@
     }
   }
   .right_container {
-    max-width: 35%;
+    flex: 1;
     position: relative;
-    margin-top: 2rem;
+    margin-top: 1.5rem;
     border: 2px solid $base-gray;
-    height: 400px;
+    height: 600px;
     width: 100%;
     border-radius: 12px;
     border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+
+    .notification_heading {
+      position: sticky;
+      margin: 0;
+      padding: 1rem;
+      border-bottom: 1px solid $base-gray;
+      border-top-left-radius: 12px;
+      color: $base-white;
+      background: linear-gradient(
+        90deg,
+        $gardient-primary-color 0%,
+        $gardient-secondary-color 100%
+      );
+    }
+    .list_wrapper {
+      position: absolute;
+      padding-bottom: 1rem;
+      overflow: auto;
+      height: -webkit-fill-available;
+      .notification_list_container {
+        padding: 0;
+        li {
+          cursor: pointer;
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+          border-bottom: 1px solid $base-gray;
+          padding: 8px 1rem;
+          background-color: transparent;
+          transition: background-color 0.3s ease, transform 0.3s ease;
+          .notification_title {
+            font-size: 16px;
+            line-height: 18px;
+            font-weight: 700;
+          }
+          .notification_details,
+          .notification_dateTime {
+            font-size: 14px;
+            line-height: 14px;
+            font-weight: 400;
+            // color:$bas
+          }
+          .notification_dateTime {
+            font-style: oblique;
+          }
+          &:hover {
+            background-color: #e4e4e4;
+          }
+        }
+      }
+    }
   }
 }
 
