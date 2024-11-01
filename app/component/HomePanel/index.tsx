@@ -6,7 +6,13 @@ import { schoolMessage } from "@/app/utils/constant";
 
 const HomePanel: FC = () => {
   return (
-    <Flex align="start" gap={12} justify="space-between">
+    <Flex
+      align="start"
+      gap={8}
+      justify="space-between"
+      wrap
+      className={styles.panel_container}
+    >
       <Flex vertical className={styles.left_container}>
         <h2>
           <EditOutlined />
