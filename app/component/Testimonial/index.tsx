@@ -5,7 +5,7 @@ import styles from "./index.module.scss";
 type PropType = {};
 
 const Testimonial: FC<PropType> = (props: PropType) => {
-  return <>PLACEHOLDER</>;
+  return <section>tea</section>;
 };
 
 export default Testimonial;

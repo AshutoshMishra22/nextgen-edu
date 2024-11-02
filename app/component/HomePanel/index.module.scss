@@ -4,15 +4,13 @@
   .left_container {
     color: $base-black;
     flex: 1.5;
-    .greet_school {
+    .text_heading {
       margin-left: 0.5rem;
     }
     .school_message {
       margin: 0;
       font-size: 14px;
       line-height: 21px;
-    }
-    .panel_card {
     }
   }
   .right_container {
@@ -21,7 +19,7 @@
     .notification_panel {
       position: relative;
       margin-top: 1.5rem;
-      height: 580px;
+      height: 400px;
       width: 100%;
 
       .notification_heading {
@@ -79,6 +77,9 @@
           }
         }
       }
+    }
+    .text_heading {
+      margin-left: 0.5rem;
     }
   }
 }
