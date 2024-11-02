@@ -1,0 +1,11 @@
+@import "../../base.module.scss" ;
+.gallery_image {
+  width: 100px !important;
+  height: 100px !important;
+}
+@include sm-mobile {
+  .gallery_image {
+    width: 70px !important;
+    height: 70px !important;
+  }
+}

@@ -1,66 +1,59 @@
-import { Timeline } from "antd";
-import React, { FC } from "react";
+import { Timeline, Image, Flex } from "antd";
+import { TimeLineItemProps } from "antd/es/timeline/TimelineItem";
+import React, { FC, useEffect, useState } from "react";
+import styles from "./index.module.scss";
 
-type Props = {};
-
-const Gallery: FC = (props: Props) => {
+const mockImg = "https://cdn8.dissolve.com/p/D430_35_422/D430_35_422_1200.jpg";
+const Gallery: FC = () => {
+  const [timeLineItem, setTimeLineItem] = useState<TimeLineItemProps[]>();
+  async function fetchGalleryData() {
+    const response = await fetch(
+      "https://67263b88302d03037e6cd876.mockapi.io/get-photos/gallery"
+    );
+    const data = await response.json();
+    const finalItem = data.map(
+      (obj: {
+        name: any;
+        photo: string | undefined;
+        date: string | undefined;
+      }) => ({
+        children: (
+          <>
+            <h3>{new Date(obj.date as string).getFullYear()}</h3>
+            <Flex gap={8} wrap>
+              <Image
+                src={mockImg}
+                alt={obj.name}
+                className={styles.gallery_image}
+              />
+              <Image
+                src={mockImg}
+                alt={obj.name}
+                className={styles.gallery_image}
+              />
+              <Image
+                src={mockImg}
+                alt={obj.name}
+                className={styles.gallery_image}
+              />
+              <Image
+                src={mockImg}
+                alt={obj.name}
+                className={styles.gallery_image}
+              />
+            </Flex>
+          </>
+        ),
+      })
+    );
+    setTimeLineItem(finalItem);
+  }
+  useEffect(() => {
+    fetchGalleryData();
+  }, []);
   return (
     <div>
-      <Timeline
-        items={[
-          {
-            color: "green",
-            children: "Create a services site 2015-09-01",
-          },
-          {
-            color: "green",
-            children: "Create a services site 2015-09-01",
-          },
-          {
-            color: "red",
-            children: (
-              <>
-                <p>Solve initial network problems 1</p>
-                <p>Solve initial network problems 2</p>
-                <p>Solve initial network problems 3 2015-09-01</p>
-              </>
-            ),
-          },
-          {
-            children: (
-              <>
-                <p>Technical testing 1</p>
-                <p>Technical testing 2</p>
-                <p>Technical testing 3 2015-09-01</p>
-              </>
-            ),
-          },
-          {
-            color: "gray",
-            children: (
-              <>
-                <p>Technical testing 1</p>
-                <p>Technical testing 2</p>
-                <p>Technical testing 3 2015-09-01</p>
-              </>
-            ),
-          },
-          {
-            color: "gray",
-            children: (
-              <>
-                <p>Technical testing 1</p>
-                <p>Technical testing 2</p>
-                <p>Technical testing 3 2015-09-01</p>
-              </>
-            ),
-          },
-          {
-            color: "#00CCFF",
-            children: <p>Custom color testing</p>,
-          },
-        ]}
-      />
+      <Timeline items={timeLineItem} />
     </div>
   );
 };
