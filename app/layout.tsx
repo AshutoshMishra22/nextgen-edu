@@ -5,6 +5,8 @@ import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import "./globals.css";
 import { Footer, NavigationHeader } from "./component";
+import { Suspense } from "react";
+import Loading from "./loading";
 
 config.autoAddCss = false;
 
@@ -23,11 +25,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <AntdRegistry>
-          <NavigationHeader />
-          {children}
-          <Footer />
-        </AntdRegistry>
+        <Suspense fallback={<Loading />}>
+          <AntdRegistry>
+            <NavigationHeader />
+            {children}
+            <Footer />
+          </AntdRegistry>
+        </Suspense>
       </body>
     </html>
   );

@@ -1,12 +1,5 @@
-import { Card, Carousel, Divider, Flex } from "antd";
-import {
-  Announcment,
-  CCard,
-  Footer,
-  HomePanel,
-  Message,
-  NavigationHeader,
-} from "./component";
+import { Carousel, Divider } from "antd";
+import { Announcment, CCard, HomePanel, Message } from "./component";
 import styles from "./page.module.scss";
 import { hero_banner_list, mockNotification } from "./utils/constant";
 import Image from "next/image";
