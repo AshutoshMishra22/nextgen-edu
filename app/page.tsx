@@ -14,7 +14,6 @@ import Image from "next/image";
 export default function Home() {
   return (
     <main className={styles.container}>
-      <NavigationHeader />
       <Carousel arrows className={styles.carousel_image_container}>
         {hero_banner_list.map((img, index) => (
           <Image
@@ -35,7 +34,6 @@ export default function Home() {
         </Divider>
         <Message />
       </section>
-      <Footer />
     </main>
   );
 }

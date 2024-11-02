@@ -4,17 +4,20 @@
   gap: 20px;
   width: 100%;
   padding: 1rem 0;
-  & > div {
+  & > .card_body {
     flex: 1;
 
     &:hover {
       @include gradient-bg;
     }
     & > div {
-      display: flex;
       padding: 0.5rem 24px !important;
-      flex-direction: column;
-      gap: 8px;
+      .action_link {
+        color: inherit;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
     }
   }
   .card_icon {
@@ -27,10 +30,10 @@
     text-align: center;
   }
 }
-@include sm-mobile {
+@include md-tablet {
   .card_group {
     flex-wrap: wrap;
-    & > div {
+    & > .card_body {
       display: flex;
       align-items: center;
       justify-content: center;
