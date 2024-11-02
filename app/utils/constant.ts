@@ -1,10 +1,10 @@
 import {
   faAtom,
   faBookOpen,
-  faBullseye,
   faFileSignature,
   faLaptopCode,
   faMicroscope,
+  faPhotoFilm,
   faReceipt,
   faRobot,
   faSatellite,
@@ -100,11 +100,11 @@ const mockNotification = [
   },
 ];
 const actionHighlight = [
-  { id: "mission", icon: faBullseye, title: "Mission", link: "/mission" },
   { id: "syllabus", icon: faSwatchbook, title: "Syllabus", link: "/test" },
   { id: "fee", icon: faReceipt, title: "Fee Structure", link: "/test" },
   { id: "booklist", icon: faBookOpen, title: "Book List", link: "/test" },
   { id: "form", icon: faFileSignature, title: "Form", link: "/test" },
+  { id: "Gallery", icon: faPhotoFilm, title: "Gallery", link: "/gallery" },
 ];
 const faultyList = [
   { id: "1", name: "James", imgUrl: "", details: "B.Sc in maths" },

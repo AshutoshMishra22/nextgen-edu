@@ -3,7 +3,6 @@ import React, { FC } from "react";
 import styles from "./index.module.scss";
 import Image from "next/image";
 import directorPNG from "../../assest/MockDir.png";
-import principlePNG from "../../assest/MockPri.png";
 import { message_primary, message_secondary } from "@/app/utils/constant";
 
 const Message: FC = () => {
@@ -23,7 +22,7 @@ const Message: FC = () => {
           className={`${styles.message_image_main} ${styles.align_right}`}
         >
           <div className={styles.image_shape_2} />
-          <Image src={principlePNG} alt="Principle" />
+          <Image src={directorPNG} alt="Principle" />
         </section>
       </Flex>
     </Flex>
