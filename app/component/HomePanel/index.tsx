@@ -1,10 +1,14 @@
 import { Flex } from "antd";
 import React, { FC } from "react";
 import styles from "./index.module.scss";
-import { BankOutlined } from "@ant-design/icons";
-import { schoolMessage } from "@/app/utils/constant";
+import { ourPromise, schoolMessage } from "@/app/utils/constant";
 import { HomePanelProptype } from "./proptypes";
-import { Discover, Testimonial } from "..";
+import { Discover } from "..";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faHandshakeAngle,
+  faLandmarkDome,
+} from "@fortawesome/free-solid-svg-icons";
 
 const HomePanel: FC<HomePanelProptype> = (props) => {
   return (
@@ -18,8 +22,8 @@ const HomePanel: FC<HomePanelProptype> = (props) => {
       <Flex gap={18} vertical className={styles.left_container}>
         <Flex vertical>
           <h2>
-            <BankOutlined />
-            <span className={styles.greet_school}>Welcome to School</span>
+            <FontAwesomeIcon icon={faLandmarkDome} />
+            <span className={styles.text_heading}>Welcome to School</span>
           </h2>
           <p className={styles.school_message}>{schoolMessage}</p>
         </Flex>
@@ -46,7 +50,13 @@ const HomePanel: FC<HomePanelProptype> = (props) => {
             </ul>
           </section>
         </section>
-        <Testimonial />
+        <Flex vertical>
+          <h2>
+            <FontAwesomeIcon icon={faHandshakeAngle} />
+            <span className={styles.text_heading}>Our Promise</span>
+          </h2>
+          <p className={styles.school_message}>{ourPromise}</p>
+        </Flex>
       </Flex>
     </Flex>
   );
