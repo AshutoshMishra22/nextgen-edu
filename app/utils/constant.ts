@@ -1,8 +1,13 @@
 import {
+  faAtom,
   faBookOpen,
   faBullseye,
   faFileSignature,
+  faLaptopCode,
+  faMicroscope,
   faReceipt,
+  faRobot,
+  faSatellite,
   faSwatchbook,
 } from "@fortawesome/free-solid-svg-icons";
 import school1 from "../assest/school_1.svg";
@@ -98,4 +103,27 @@ const actionHighlight = [
   { id: "booklist", icon: faBookOpen, title: "Book List", link: "/test" },
   { id: "form", icon: faFileSignature, title: "Form", link: "/test" },
 ];
-export { hero_banner_list, schoolMessage, mockNotification, actionHighlight };
+const faultyList = [
+  { id: "1", name: "James", imgUrl: "", details: "B.Sc in maths" },
+  { id: "1", name: "James", imgUrl: "", details: "B.Sc in maths" },
+  { id: "1", name: "James", imgUrl: "", details: "B.Sc in maths" },
+  { id: "1", name: "James", imgUrl: "", details: "B.Sc in maths" },
+  { id: "1", name: "James", imgUrl: "", details: "B.Sc in maths" },
+  { id: "1", name: "James", imgUrl: "", details: "B.Sc in maths" },
+  { id: "1", name: "James", imgUrl: "", details: "B.Sc in maths" },
+];
+const labList = [
+  { id: "1", name: "Chemistry Lab", icon: faAtom, details: "experiment" },
+  { id: "1", name: "Physics Lab", icon: faSatellite, details: "experiment" },
+  { id: "1", name: "Biology Lab", icon: faMicroscope, details: "experiment" },
+  { id: "1", name: "Computer Lab", icon: faLaptopCode, details: "experiment" },
+  { id: "1", name: "Robotics Lab", icon: faRobot, details: "experiment" },
+];
+export {
+  hero_banner_list,
+  faultyList,
+  labList,
+  schoolMessage,
+  mockNotification,
+  actionHighlight,
+};
