@@ -19,8 +19,8 @@ const SubCard = ({ item }: { item: Record<string, string | IconProp> }) => {
 };
 const CCard: React.FC = () => (
   <Flex gap={16} className={styles.card_group}>
-    {actionHighlight.map((item: Record<string, string | IconProp>) => (
-      <SubCard item={item} />
+    {actionHighlight.map((item: Record<string, string | IconProp>, index) => (
+      <SubCard item={item} key={index} />
     ))}
   </Flex>
 );
