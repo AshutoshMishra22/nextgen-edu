@@ -27,6 +27,7 @@ export default function Home() {
             alt={`banner-${index}`}
             className={styles.carousel_image}
             priority
+            key={index}
           />
         ))}
       </Carousel>
