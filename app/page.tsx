@@ -1,5 +1,11 @@
-import { Card, Carousel, Flex } from "antd";
-import { Announcment, CCard, HomePanel, NavigationHeader } from "./component";
+import { Card, Carousel, Divider, Flex } from "antd";
+import {
+  Announcment,
+  CCard,
+  HomePanel,
+  Message,
+  NavigationHeader,
+} from "./component";
 import styles from "./page.module.scss";
 import { hero_banner_list, mockNotification } from "./utils/constant";
 import Image from "next/image";
@@ -27,6 +33,10 @@ export default function Home() {
       <section className={styles.page_children_container}>
         <CCard />
         <HomePanel notificationList={mockNotification} />
+        <Divider style={{ borderColor: styles.gradientPrimary }}>
+          <h2>Important Message</h2>
+        </Divider>
+        <Message />
       </section>
     </main>
   );
