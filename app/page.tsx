@@ -2,6 +2,7 @@ import { Card, Carousel, Divider, Flex } from "antd";
 import {
   Announcment,
   CCard,
+  Footer,
   HomePanel,
   Message,
   NavigationHeader,
@@ -38,6 +39,7 @@ export default function Home() {
         </Divider>
         <Message />
       </section>
+      <Footer />
     </main>
   );
 }
