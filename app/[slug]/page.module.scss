@@ -1,5 +1,15 @@
 @import "../base.module.scss";
 
 .container {
-  padding: 0 5rem;
+  padding: 1rem 5rem;
+  .page_title {
+    text-transform: capitalize;
+  }
+}
+@include sm-mobile {
+  .container {
+    .page_title {
+      font-size: 24px;
+    }
+  }
 }

@@ -18,11 +18,15 @@ const Gallery: FC = (props: PropType) => {
   };
   // Check if slug matches one of the route paths in componentMapping
   let RenderComponent: ReactNode = componentMapping[slug as string];
-  console.log("RenderComponent ", RenderComponent, slug);
   if (!RenderComponent) {
     notFound(); // If slug does not match any path, show 404
   }
-  return <section className={styles.container}>{RenderComponent}</section>;
+  return (
+    <section className={styles.container}>
+      <h2 className={styles.page_title}>{slug}</h2>
+      {RenderComponent}
+    </section>
+  );
 };
 
 export default Gallery;
