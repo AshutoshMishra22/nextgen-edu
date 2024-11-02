@@ -1,9 +1,10 @@
 @import "../../base.module.scss";
 
 .message_group {
-  & > div {
+  & > .message_set {
     flex: 1;
     width: 100%;
+    overflow: hidden;
     & > section,
     > p {
       flex: 1;
@@ -13,7 +14,8 @@
     }
     .message_image_main {
       position: relative;
-      div {
+      .image_shape_1,
+      .image_shape_2 {
         @include gradient-bg;
         border: 2px solid $gardient-secondary-color;
         height: 300px;
@@ -44,6 +46,19 @@
       }
       &.align_right {
         text-align: right;
+      }
+    }
+  }
+}
+
+@include sm-mobile {
+  .message_group {
+    & > .message_set {
+      flex-wrap: wrap;
+      &:nth-child(2) {
+        border-top: 1px solid $gardient-secondary-color;
+        padding-top: 1rem;
+        flex-direction: column-reverse;
       }
     }
   }
