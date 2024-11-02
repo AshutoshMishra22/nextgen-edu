@@ -8,6 +8,34 @@
     margin-right: 8px;
     font-size: 32px;
   }
+  .discover_card_group {
+    .discover_card {
+      flex: 1;
+      & > div:nth-child(2) {
+        height: 100%;
+        overflow: auto;
+      }
+      .list_icon {
+        font-size: 1.5rem;
+        margin-right: 0.5rem;
+      }
+      .list_item_container {
+        .list_item {
+          .list_item_icon {
+            font-size: 1.25rem;
+          }
+          .card_title,
+          .card_details {
+            font-size: 14px;
+            font-weight: 600;
+          }
+          .card_details {
+            font-weight: 400;
+          }
+        }
+      }
+    }
+  }
   .discover_list {
     padding-top: 8px;
     padding-left: 1.5rem !important;

@@ -1,33 +1,11 @@
-import { Avatar, Card, Flex, Timeline } from "antd";
+import { Flex } from "antd";
 import React, { FC } from "react";
 import styles from "./index.module.scss";
-import {
-  BankOutlined,
-  ReconciliationOutlined,
-  SmileOutlined,
-} from "@ant-design/icons";
+import { BankOutlined } from "@ant-design/icons";
 import { schoolMessage } from "@/app/utils/constant";
 import { HomePanelProptype } from "./proptypes";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCalendarDays } from "@fortawesome/free-solid-svg-icons";
-import Meta from "antd/es/card/Meta";
-import { Discover } from "..";
-const SubComponent = ({
-  title,
-  description,
-}: {
-  title: string;
-  description: string;
-}) => {
-  return (
-    <div>
-      <h2>Discover</h2>
-      {/* <Timeline
-        items={}
-      /> */}
-    </div>
-  );
-};
+import { Discover, Testimonial } from "..";
+
 const HomePanel: FC<HomePanelProptype> = (props) => {
   return (
     <Flex
@@ -47,26 +25,29 @@ const HomePanel: FC<HomePanelProptype> = (props) => {
         </Flex>
         <Discover />
       </Flex>
-      <section className={styles.right_container}>
-        <h2 className={styles.notification_heading}>Notification</h2>
-        <section className={styles.list_wrapper}>
-          <ul className={styles.notification_list_container}>
-            {props.notificationList?.map((notification) => (
-              <li key={notification.title}>
-                <div className={styles.notification_title}>
-                  {notification.title}
-                </div>
-                <div className={styles.notification_details}>
-                  {notification.details}
-                </div>
-                <div className={styles.notification_dateTime}>
-                  {notification.dateTime}
-                </div>
-              </li>
-            ))}
-          </ul>
+      <Flex vertical gap={18} className={styles.right_container}>
+        <section className={styles.notification_panel}>
+          <h2 className={styles.notification_heading}>Notification</h2>
+          <section className={styles.list_wrapper}>
+            <ul className={styles.notification_list_container}>
+              {props.notificationList?.map((notification) => (
+                <li key={notification.title}>
+                  <div className={styles.notification_title}>
+                    {notification.title}
+                  </div>
+                  <div className={styles.notification_details}>
+                    {notification.details}
+                  </div>
+                  <div className={styles.notification_dateTime}>
+                    {notification.dateTime}
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </section>
         </section>
-      </section>
+        <Testimonial />
+      </Flex>
     </Flex>
   );
 };
