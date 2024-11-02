@@ -43,3 +43,7 @@ $gardient-secondary-color: rgba(238, 130, 130, 1);
     @content;
   }
 }
+
+:export {
+  gradientPrimary: $gardient-primary-color;
+}

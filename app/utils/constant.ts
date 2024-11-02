@@ -122,11 +122,17 @@ const labList = [
   { id: "1", name: "Computer Lab", icon: faLaptopCode, details: "experiment" },
   { id: "1", name: "Robotics Lab", icon: faRobot, details: "experiment" },
 ];
+const message_primary =
+  "we are dedicated to providing a nurturing environment where every student can thrive. Our mission is to foster a love for learning, encourage curiosity, and support each child's unique journey. Together, we strive for excellence and aim to make a positive impact on the world.";
+const message_secondary =
+  " we believe in the power of education to transform lives. Our mission is to provide a nurturing environment where every student can thrive. We are committed to fostering a love for learning and supporting each child's unique journey.";
 export {
   hero_banner_list,
   faultyList,
   labList,
+  message_primary,
   schoolMessage,
+  message_secondary,
   ourPromise,
   mockNotification,
   actionHighlight,

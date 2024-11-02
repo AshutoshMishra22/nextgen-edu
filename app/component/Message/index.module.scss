@@ -1,0 +1,50 @@
+@import "../../base.module.scss";
+
+.message_group {
+  & > div {
+    flex: 1;
+    width: 100%;
+    & > section,
+    > p {
+      flex: 1;
+    }
+    .message_content {
+      text-align: center;
+    }
+    .message_image_main {
+      position: relative;
+      div {
+        @include gradient-bg;
+        border: 2px solid $gardient-secondary-color;
+        height: 300px;
+        width: 300px;
+      }
+
+      .image_shape_1 {
+        position: absolute;
+        border-radius: 23% 77% 32% 68% / 81% 89% 11% 19%;
+        z-index: -1;
+        + img {
+          margin-top: 18px;
+          border-radius: 42px;
+        }
+      }
+      .image_shape_2 {
+        right: 0;
+        border-radius: 44% 56% 46% 54% / 61% 10% 90% 39%;
+        position: absolute;
+        z-index: -1;
+        + img {
+          -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+          margin-top: 18px;
+          text-align: right;
+          border-radius: 42px;
+        }
+      }
+      &.align_right {
+        text-align: right;
+      }
+    }
+  }
+}
